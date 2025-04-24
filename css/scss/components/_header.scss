@@ -1,0 +1,228 @@
+.header {
+    position: fixed;
+    width: 100%;
+    top: 2.2rem;
+    left: 0;
+    z-index: 100;
+
+    @media #{$lg} {
+        top: 0.7rem;
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 6rem;
+        background-color: rgba($color: #fff, $alpha: 0.5);
+        backdrop-filter: blur(1rem);
+        box-sizing: border-box;
+        padding: 0 0 0 1.5rem;
+        border-radius: 4rem;
+
+        @media #{$lg} {
+            justify-content: space-between;
+            width: calc(100% - 0.6rem);
+            height: 4.7rem;
+            margin: 0 0.3rem;
+        }
+    }
+
+    &__burger-btn {
+        width: 5rem;
+        height: 3rem;
+        background: linear-gradient(90deg, rgba($color: $color-active, $alpha: 0.8), rgba($color: #163966, $alpha: 0.8), $color-active);
+        background-size: 200%;
+        padding: 0.8rem 1.4rem;
+        border: none;
+        border-radius: 2.4rem;
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            background-position: right;
+
+            svg {
+                rect {
+                    fill: $color-active;
+                }
+            }
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+
+            rect {
+                transition: all .1s linear;
+            }
+        }
+    }
+
+    &__logo {
+        display: none;
+
+        @media #{$lg} {
+            display: flex;
+            width: 13rem;
+            height: 100%;
+            margin-top: -0.7rem;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+
+    &__menu {
+        margin: 0 6.3rem;
+
+        @media #{$lg} {
+            display: none;
+        }
+    }
+
+    &__socials {
+        gap: 0;
+
+        @media #{$lg} {
+            display: none;
+        }
+        
+        .socials__item {
+            border: none;
+        }
+    }
+
+    &__bubble {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 3.2rem;
+        height: 100%;
+        padding: 0 2.5rem;
+        margin-left: auto;
+
+        @media #{$lg} {
+            margin-left: 0;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: calc(100% + 1rem);
+            background: linear-gradient(90deg, #fff, transparent);
+            border-radius: 4rem;
+            opacity: 0.6;
+            z-index: -1;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 0;
+        }
+    }
+
+    &__favorites {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5.4rem;
+        height: 5.4rem;
+        background-color: rgba(#CAD5E2, 0.2);
+        backdrop-filter: blur(1.5rem);
+        border-radius: 50%;
+        right: -18rem;
+
+        @media #{$lg} {
+            display: none;
+        }
+
+        &:hover {
+            svg {
+                path {
+                    &:first-of-type {
+                        fill: #75C1EF;
+                    }
+                }
+            }
+        }
+
+        &:active {
+            svg {
+                path {
+                    opacity: 0;
+
+                    &:last-of-type {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: calc(100% - 1rem);
+            height: calc(100% - 1rem);
+            background: linear-gradient(180deg, rgba(#fff, 0.7), rgba(#fff, 0.35));
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+        }
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+            z-index: 1;
+
+            path {
+                transition: all .1s linear;
+
+                &:last-of-type {
+                    opacity: 0;
+                }
+            }
+        }
+
+        &_mob {
+            display: none;
+
+            @media #{$lg} {
+                position: relative;
+                display: block;
+                background-color: transparent;
+                backdrop-filter: none;
+                width: 2rem;
+                height: 2rem;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+
+            &::before {
+                content: none;
+            }
+        }
+    }
+
+    &__phone {
+        height: 100%;
+
+        a {
+            width:  max-content;
+            height: 100%;
+
+            span {
+                @media #{$lg} {
+                    display: none;
+                }
+            }
+        }
+    }
+}

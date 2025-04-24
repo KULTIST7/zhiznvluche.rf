@@ -1,0 +1,90 @@
+.page-nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    height: 4.6rem;
+    background-color: rgba(#D7DDEB, 0.3);
+    backdrop-filter: blur(1rem);
+    border-radius: 3rem;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 4rem;
+    z-index: 100;
+
+    @media #{$lg} {
+        display: none;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        height: 100%;
+        padding-left: 0;
+
+        li {
+            position: relative;
+            height: 100%;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: calc(100% + 1rem);
+                background: linear-gradient(90deg, rgba(#fff, 0.8), rgba(#fff, 0.48));
+                border-radius: 3rem;
+                transition: all .1s linear;
+                opacity: 0;
+                transform: translateY(-50%);
+                z-index: -1;
+                top: 50%;
+                left: 0;
+            }
+
+            &.current {
+                &::before {
+                    opacity: 1;
+                }
+
+                a {
+                    color: #1C78B9;
+                    padding: 0 10rem;
+                }
+            }
+
+            a {
+                font-weight: 500;
+                font-size: 1.4rem;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: #455A64;
+                display: flex;
+                align-items: center;
+                height: 100%;
+                padding: 0 3rem;
+                transition: all .1s linear;
+
+                &:hover {
+                    color: #1C78B9;
+                }
+            }
+        }
+    }
+
+    .btn {
+        padding: 0 4.5rem;
+        margin-top: -0.6rem;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 2rem;
+            height: 2rem;
+            background: url(../images/svg/arrow.svg) no-repeat center;
+            background-size: contain;
+            pointer-events: none;
+            transform: translateY(-50%);
+            top: 50%;
+            right: 1.5rem;
+        }
+    }
+}

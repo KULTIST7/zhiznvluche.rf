@@ -1,0 +1,141 @@
+.advantages {
+    margin-bottom: 19.5rem;
+
+    @media #{$lg} {
+        margin-bottom: 4rem;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-bottom: 5rem;
+
+        @media #{$lg} {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__slider {
+        width: calc(100% + (100vw - 136rem) / 2);
+        margin-bottom: 10rem;
+
+        @media #{$lg} {
+            width: calc(100% + 1.4rem);
+            margin-bottom: 3rem;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 48rem;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, #F3F5F9);
+            z-index: 2;
+            pointer-events: none;
+            top: 0;
+            right: 0;
+
+            @media #{$lg} {
+                content: none;
+            }
+        }
+
+        .swiper-wrapper {
+            padding-bottom: 4rem;
+
+            @media #{$lg} {
+                padding-bottom: 2.8rem;
+            }
+        }
+    }
+
+    &__slide {
+        position: relative;
+        display: flex;
+        height: auto;
+        aspect-ratio: 490 / 347;
+        box-sizing: border-box;
+        padding: 2rem 2.5rem;
+
+        @media #{$lg} {
+            padding: 1rem 1.4rem;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 15rem;
+            background: linear-gradient(0deg, transparent, rgba(#1A2535, 0.8));
+            border-radius: 0 10rem 0 0;
+            top: 0;
+            left: 0;
+
+            @media #{$lg} {
+                height: 8.5rem;
+                border-radius: 0 5rem 0 0;
+            }
+        }
+
+        h3 {
+            font-family: $font-second;
+            font-weight: 400;
+            font-size: 6rem;
+            text-transform: uppercase;
+            color: #fff;
+            z-index: 1;
+
+            @media #{$lg} {
+                font-size: 4rem;
+            }
+        }
+
+        &__text {
+            position: absolute;
+            max-width: 41rem;
+            background-color: rgba(#fff, 0.7);
+            backdrop-filter: blur(1.5rem);
+            box-sizing: border-box;
+            padding: 4rem;
+            border-radius: 5rem 5rem 0 5rem;
+            right: -4rem;
+            bottom: -4rem;
+
+            @media #{$lg} {
+                max-width: 23.5rem;
+                padding: 1.3rem 2rem;
+                border-radius: 2.5rem 2.5rem 0 2.5rem;
+                right: -1.4rem;
+                bottom: -2.8rem;
+            }
+
+            p {
+                font-size: 1.8rem;
+                line-height: 2.2rem;
+                color: $color-secondary;
+
+                @media #{$lg} {
+                    font-size: 1.4rem;
+                    line-height: 1.3rem;
+                }
+            }
+        }
+
+        &__bg {
+            position: absolute;
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+            border-radius: 0 10rem 10rem 10rem;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            @media #{$lg} {
+                border-radius: 0 5rem 5rem 5rem;
+            }
+        }
+    }
+}

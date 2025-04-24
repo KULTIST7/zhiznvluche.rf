@@ -1,0 +1,35 @@
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @media #{$lg} {
+        gap: 0.7rem;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+
+        span {
+            font-weight: 500;
+            font-size: 1.4rem;
+            color: #ACB5C2;
+        }
+
+        p, a {
+            font-weight: 500;
+            font-size: 1.4rem;
+            color: $color-secondary;
+        }
+
+        a {
+            text-decoration: none;
+            transition: all .1s linear;
+
+            &:hover {
+                color: $color-active;
+            }
+        }
+    }
+}

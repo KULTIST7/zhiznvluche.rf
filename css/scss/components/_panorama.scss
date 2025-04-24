@@ -1,0 +1,80 @@
+.panorama {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70rem;
+    background: url(../images/panorama-bg.jpg) no-repeat bottom center;
+    background-size: contain;
+    box-sizing: border-box;
+    padding: 0 0 2.5rem;
+    margin-bottom: 21rem;
+
+    @media #{$lg} {
+        min-height: 60rem;
+        background-size: cover;
+        margin-bottom: 3rem;
+    }
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        width: 100%;
+        left: 0;
+    }
+
+    &::before {
+        background: url(../images/panorama-clouds-1.png) no-repeat center / contain;
+        height: 28.6rem;
+        top: 0;
+
+        @media #{$lg} {
+            background: url(../images/panorama-clouds-1-mob.png) no-repeat center / contain;
+            width: 26.5rem;
+            height: 21rem;
+            top: 21.8rem;
+            left: 0;
+        }
+    }
+
+    &::after {
+        background: url(../images/panorama-clouds-2.png) no-repeat;
+        background-position: 100% 5.6rem;
+        background-size: contain;
+        height: 52.5rem;
+        bottom: -21rem;
+
+        @media #{$lg} {
+            background: url(../images/panorama-clouds-2-mob.png) no-repeat center / cover;
+            background-position: 100% 0;
+            width: 100%;
+            height: 19.3rem;
+            bottom: -3rem;
+            left: 0;
+        }
+    }
+
+    h2 {
+        font-size: 20rem;
+        text-transform: uppercase;
+        text-shadow: 0 0 4rem #E1E7EE;
+        color: #fff;
+        transform: translateX(17.3rem);
+
+        @media #{$lg} {
+            font-size: 12rem;
+            transform: none;
+        }
+    }
+
+    .btn {
+        z-index: 1;
+
+        @media #{$md} {
+            width: calc(100% - 1.6rem);
+            margin-left: -0.8rem;
+        }
+    }
+}

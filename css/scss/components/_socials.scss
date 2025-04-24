@@ -1,0 +1,33 @@
+.socials {
+    display: flex;
+    gap: 1.6rem;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        width: 4rem;
+        height: 4rem;
+        border: 1px #fff solid;
+        border-radius: 50%;
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+
+            path {
+                filter: invert(50%);
+                transition: all .1s linear;
+            }
+        }
+
+        &:hover {
+            svg {
+                path {
+                    filter: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+$xl: '(min-width: 1920px)';
+$lg: '(max-width: 992px)';
+$md: '(max-width: 768px)';
+$sm: '(max-width: 576px)';
+
+$font-main: "TT Firs Neue", Arial, sans-serif;
+$font-second: "Steelfish", Arial, sans-serif;
+
+$color-primary: #1C1C1C;
+$color-secondary: #546071;
+$color-active: #3C9CD7;
+$color-active-secondary: #7ED3F7;
+$color-border: #E0ECF1;
+
+html {
+    font-size: calc(100vw / 1920 * 10);
+
+    @media #{$xl} {
+        font-size: 10px;
+    }
+
+    @media #{$lg} {
+        font-size: calc(100vw / 768 * 10);
+    }
+
+    @media #{$md} {
+        font-size: calc(100vw / 576 * 10);
+    }
+
+    @media #{$sm} {
+        font-size: calc(100vw / 375 * 10);
+    }
+}
+
+body {
+    background-color: #F3F5F9;
+
+    &.noscroll {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        overflow-y: hidden;
+    }
+
+    * {
+        font-family: $font-main;
+        font-size: 1.6rem;
+        margin: 0;
+    }
+
+    h1, h2 {
+        font-family: $font-second;
+        font-weight: 400;
+        color: #000;
+    }
+
+    h1 {
+        font-size: 8rem;
+
+        @media #{lg} {
+            font-size: 4.5rem;
+        }
+    }
+
+    h2 {
+        font-size: 6rem;
+
+        @media #{lg} {
+            font-size: 3rem;
+        }
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 1.6rem;
+
+        @media #{$lg} {
+            font-size: 1.4rem;
+        }
+    }
+
+    a {
+        font-weight: 400;
+        font-size: 1.6rem;
+        color: #5EA7C9;
+    }
+
+    main {
+        margin-top: 13.2rem;
+
+        @media #{$lg} {
+            margin-top: 6.2rem;
+        }
+    }
+}
+
+.section {
+    &-box {
+        max-width: 136rem;
+        width: 100%;
+        margin: 0 auto;
+    
+        @media #{$lg} {
+            width: calc(100% - 2.8rem);
+            margin: 0 1.4rem;
+        }
+    }
+}

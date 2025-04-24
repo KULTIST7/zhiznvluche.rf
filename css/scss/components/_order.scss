@@ -1,0 +1,168 @@
+.order {
+    position: relative;
+    margin-bottom: 12rem;
+    z-index: 2;
+
+    @media #{$lg} {
+        margin-bottom: 7rem;
+    }
+
+    &__image {
+        position: absolute;
+        object-fit: contain;
+        object-position: left;
+        width: auto;
+        height: calc(100% + 8rem);
+        pointer-events: none;
+        left: 0;
+        bottom: 0;
+
+        @media #{$lg} {
+            position: relative;
+            object-fit: cover;
+            object-position: 66%;
+            width: 100%;
+            height: 38rem;
+        }
+    }
+
+    &__content {
+        background-color: #D5D9E3;
+        padding: 4.5rem 12rem 6.5rem 0;
+
+        @media #{$lg} {
+            position: relative;
+            padding: 2.5rem 0 1.8rem;
+            border-radius: 0 0 5rem 5rem;
+            margin-top: -2.5rem;
+        }
+
+        &::before {
+            content: none;
+            position: absolute;
+            width: 100%;
+            height: 5rem;
+            background: linear-gradient(0deg, #D5D9E3, transparent);
+            transform: translateY(-100%);
+            top: 0;
+            left: 0;
+            
+            @media #{$lg} {
+                content: '';
+            }
+        }
+        
+        .section-box {
+            display: flex;
+            justify-content: end;
+
+            @media #{$lg} {
+                justify-content: center;
+            }
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            gap: 1.5rem;
+            max-width: 59rem;
+            z-index: 1;
+
+            @media #{$lg} {
+                align-items: start;
+                gap: 1rem;
+            }
+
+            .title {
+                margin-bottom: 3rem;
+
+                @media #{$lg} {
+                    max-width: 23rem;
+                    margin-bottom: 0.5rem;
+                }
+            }
+
+            input {
+                width: calc(100% - 4rem);
+
+                @media #{$lg} {
+                    font-weight: 500;
+                    width: 100%;
+                    height: 5rem;
+                    padding: 0 2rem;
+                }
+            }
+
+            &__connect {
+                justify-content: end;
+            }
+
+            &__notification {
+                text-align: end;
+                max-width: 40rem;
+
+                @media #{$lg} {
+                    text-align: center;
+                    max-width: none;
+                }
+
+                &, a {
+                    font-size: 1.2rem;
+                    line-height: 1.4rem;
+                }
+            }
+        }
+    }
+
+    &__pattern {
+        position: absolute;
+        width: 19rem;
+        height: 35.5rem;
+        background: url(../images/svg/pattern.svg) no-repeat center / contain;
+        top: 2rem;
+        right: 8.8rem;
+
+        @media #{$lg} {
+            background: none;
+            width: 100%;
+            height: 26rem;
+            top: auto;
+            right: auto;
+            bottom: 9rem;
+            left: 0;
+        }
+
+        @media #{$md} {
+            left: -16rem;
+        }
+
+        @media #{$sm} {
+            bottom: 12rem;
+            left: -8rem;
+        }
+
+        img {
+            position: absolute;
+            object-fit: cover;
+            object-position: -35%;
+            width: 53.7rem;
+            height: 31.5rem;
+            pointer-events: none;
+            right: -8.8rem;
+            bottom: -19rem;
+
+            @media #{$lg} {
+                object-fit: contain;
+                object-position: center;
+                max-width: 100%;
+                width: auto;
+                height: 100%;
+                right: auto;
+                bottom: auto;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}

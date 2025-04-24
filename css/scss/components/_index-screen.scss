@@ -1,0 +1,81 @@
+.index-screen {
+    position: relative;
+    min-height: 94.3rem;
+    background: url(../images/body-bg-main.jpg) no-repeat top center / 100% auto;
+    padding-top: 13.2rem;
+    margin-top: -13.2rem;
+
+    @media #{$lg} {
+        min-height: 39.2rem;
+        padding-top: 6.2rem;
+        margin-top: -6.2rem;
+    }
+
+    @media #{$md} {
+        background-size: 140% auto;
+    }
+
+    @media #{$sm} {
+        background-size: 260% auto;
+        background-position: 56% 0;
+    }
+
+    &::before {
+        content: none;
+        position: absolute;
+        width: 100%;
+        height: 10rem;
+        background: linear-gradient(0deg, #F3F5F9, transparent);
+        left: 0;
+        bottom: 0;
+
+        @media #{$sm} {
+            content: '';
+        }
+    }
+
+    &__content {
+        display: flex;
+        gap: 45rem;
+
+        @media #{$lg} {
+            justify-content: center;
+            gap: 0;
+        }
+    }
+
+    &__logo {
+        object-fit: contain;
+        object-position: center;
+        width: 22rem;
+        height: max-content;
+
+        @media #{$lg} {
+            display: none;
+        }
+    }
+
+    &__video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 19.6rem;
+        height: 19.6rem;
+        border-radius: 3rem 16rem 16rem 16rem;
+        margin-top: 2.5rem;
+
+        @media #{$lg} {
+            width: 11.5rem;
+            height: 11.5rem;
+            margin-top: 8rem;
+        }
+
+        img {
+            object-fit: contain;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+        }
+    }
+}

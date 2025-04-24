@@ -1,0 +1,38 @@
+.phone {
+    display: flex;
+    align-items: center;
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        text-decoration: none;
+
+        &:hover {
+            svg {
+                path {
+                    fill: $color-active;
+                }
+            }
+
+            span {
+                color: $color-active;
+            }
+        }
+
+        svg {
+            width: 1.8rem;
+            height: 1.8rem;
+
+            path {
+                transition: all .1s linear;
+            }
+        }
+
+        span {
+            font-size: 1.8rem;
+            color: #1E90E1;
+            transition: all .1s linear;
+        }
+    }
+}

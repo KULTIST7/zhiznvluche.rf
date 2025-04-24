@@ -1,0 +1,30 @@
+.up {
+    position: fixed;
+    width: 5.4rem;
+    height: 5.4rem;
+    transition: all .1s linear;
+    right: 4rem;
+    bottom: 4rem;
+    cursor: pointer;
+    z-index: 100;
+
+    @media #{$lg} {
+        right: 1.5rem;
+        bottom: 1.5rem;
+    }
+
+    &:hover {
+        .up__arrow {
+            fill: $color-active-secondary;
+        }
+    }
+
+    &-invisible {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &__arrow {
+        transition: all .1s linear;
+    }
+}

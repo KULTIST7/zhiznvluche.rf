@@ -1,0 +1,61 @@
+.btn {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    height: 5.7rem;
+    background:
+    linear-gradient(90deg, $color-active, #163966, $color-active) padding-box,
+    linear-gradient(90deg, rgba($color: #fff, $alpha: 0.8), transparent) border-box;
+    background-size: 200%;
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+    border: 0.6rem solid transparent;
+    border-radius: 2.9rem;
+    padding: 0 3.7rem;
+    margin: 0;
+    cursor: pointer;
+    
+    &:hover {
+        background-position: right;
+    }
+
+    &:active {
+        background:
+        linear-gradient(0deg, $color-active, $color-active) padding-box,
+        linear-gradient(90deg, rgba($color: #fff, $alpha: 0.8), transparent) border-box;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: calc(100% - 3rem);
+        height: calc(100% - 0.8rem);
+        background-color: rgba($color: #009DFF, $alpha: 0.5);
+        border-radius: 2.4rem;
+        filter: blur(1.5rem);
+        z-index: -1;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+
+    &-disabled, &:disabled {
+        color: #B6C9D4;
+        background:
+        linear-gradient(0deg, #E0EFF8, #E0EFF8) padding-box,
+        linear-gradient(0deg, rgba($color: #fff, $alpha: 0.8), rgba($color: #fff, $alpha: 0.8)) border-box;
+        pointer-events: none;
+
+        &::before {
+            content: none;
+        }
+    }
+}
