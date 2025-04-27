@@ -160,17 +160,17 @@
         &__item {
             position: absolute;
 
-            // &::before {
-            //     content: none;
-            //     position: absolute;
-            //     width: 10rem;
-            //     height: 100%;
-            //     top: 0;
+            &::before {
+                content: none;
+                position: absolute;
+                width: 10rem;
+                height: 100%;
+                top: 0;
 
-            //     @media #{$xl} {
-            //         content: '';
-            //     }
-            // }
+                @media #{$xl} {
+                    content: '';
+                }
+            }
 
             &:nth-child(1) {
                 width: 82.8rem;

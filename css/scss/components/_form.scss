@@ -1,5 +1,5 @@
 .form {
-    input {
+    input, textarea {
         font-size: 1.8rem;
         color: #44565D;
         width: 100%;
@@ -18,6 +18,12 @@
         &::placeholder {
             color: #44565D;
         }
+    }
+
+    textarea {
+        height: 15rem;
+        padding: 2rem 2.5rem;
+        resize: none;
     }
 
     &__connect {

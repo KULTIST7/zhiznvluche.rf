@@ -1,0 +1,66 @@
+.wishlist {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+
+    svg {
+        width: 2rem;
+        height: 2rem;
+        z-index: 1;
+
+        path {
+            transition: all .1s linear;
+
+            &:last-of-type {
+                opacity: 0;
+            }
+        }
+    }
+
+    &:hover {
+        svg {
+            path {
+                &:first-of-type {
+                    fill: #75C1EF;
+                }
+            }
+        }
+    }
+
+    &[data-role=del], &:active {
+        svg {
+            path {
+                opacity: 0;
+
+                &:last-of-type {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &_fill {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5.4rem;
+        height: 5.4rem;
+        background-color: rgba(#CAD5E2, 0.2);
+        backdrop-filter: blur(1.5rem);
+        border-radius: 50%;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: calc(100% - 1rem);
+            height: calc(100% - 1rem);
+            background: linear-gradient(180deg, rgba(#fff, 0.7), rgba(#fff, 0.35));
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+        }
+    }
+}

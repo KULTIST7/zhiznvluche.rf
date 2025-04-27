@@ -1,0 +1,43 @@
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media #{$lg} {
+        align-content: flex-start;
+        min-height: 10rem;
+        margin: 0 2rem;
+    }
+
+    &__item {
+        display: flex;
+        height: max-content;
+
+        a, span, p {
+            font-size: 1.4rem;
+            color: #9FAFB7;
+
+            @media #{$lg} {
+                color: #E0EDF3;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            transition: all .1s linear;
+
+            &:hover {
+                span {
+                    color: $color-active;
+                }
+            }
+        }
+
+        &>span {
+            color: #455A64;
+        }
+
+        p {
+            margin: 0 0.8rem;
+        }
+    }
+}

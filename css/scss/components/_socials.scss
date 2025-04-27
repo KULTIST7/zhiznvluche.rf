@@ -15,18 +15,13 @@
         svg {
             width: 2rem;
             height: 2rem;
-
-            path {
-                filter: invert(50%);
-                transition: all .1s linear;
-            }
+            filter: invert(50%);
+            transition: all .1s linear;
         }
 
         &:hover {
             svg {
-                path {
-                    filter: none;
-                }
+                filter: none;
             }
         }
     }

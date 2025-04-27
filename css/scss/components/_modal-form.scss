@@ -1,0 +1,130 @@
+.modal-form {
+    position: relative;
+    background-color: rgba(#B8C2D0, 0.6);
+    backdrop-filter: blur(1rem);
+    padding: 4rem 4rem 5.5rem;
+    border-radius: 2rem;
+
+    @media #{$lg} {
+        padding: 3rem 1rem 4rem;
+    }
+
+    &__pattern {
+        position: absolute;
+        width: 9rem;
+        height: 16.7rem;
+        background: url(../images/svg/pattern-mob-2.svg) no-repeat center / contain;
+        pointer-events: none;
+        top: -2rem;
+        right: 9.7rem;
+
+        @media #{$lg} {
+            display: none;
+        }
+
+        img {
+            position: absolute;
+            object-fit: contain;
+            object-position: center;
+            width: 29.5rem;
+            height: 14.7rem;
+            left: -9.5rem;
+            bottom: -8rem;
+        }
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 55rem;
+
+        @media #{$lg} {
+            width: 34.5rem;
+        }
+
+        &>div {
+            position: relative;
+            margin-bottom: 3.5rem;
+
+            .btn {
+                position: absolute;
+                padding: 0 6.5rem;
+                right: 0;
+                bottom: -2rem;
+
+                @media #{$lg} {
+                    transform: translateX(-50%);
+                    right: auto;
+                    left: 50%;
+                }
+            }
+        }
+
+        &__notification {
+            text-align: center;
+            max-width: 44.5rem;
+            margin: 0 auto;
+
+            @media #{$lg} {
+                max-width: 28.5rem;
+            }
+        }
+    }
+
+    h2 {
+        font-size: 8rem;
+        text-transform: uppercase;
+        color: #fff;
+        padding-left: 2.5rem;
+        margin-bottom: 3rem;
+
+        @media #{$lg} {
+            font-size: 6rem;
+            padding-left: 2rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+.fancybox__content>.f-button.is-close-btn {
+    width: 4rem;
+    height: 4rem;
+    background-color: rgba(#CAD5E2, 0.2);
+    backdrop-filter: blur(1.5rem);
+    border-radius: 50%;
+    opacity: 1;
+    top: 2.5rem;
+    right: 2.5rem;
+
+    @media #{$lg} {
+        top: 2rem;
+        right: 2rem;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 3.3rem;
+        height: 3.3rem;
+        background-color: #fff;
+        border-radius: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+
+    &:hover {
+        svg {
+            color: $color-active;
+        }
+    }
+
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: #455A64;
+        transition: all .1s linear;
+    }
+}

@@ -1,7 +1,7 @@
 .index-screen {
     position: relative;
     min-height: 94.3rem;
-    background: url(../images/body-bg-main.jpg) no-repeat top center / 100% auto;
+    background: url(../images/body-bg-main.jpg) no-repeat top center / 100%;
     padding-top: 13.2rem;
     margin-top: -13.2rem;
 
@@ -12,11 +12,11 @@
     }
 
     @media #{$md} {
-        background-size: 140% auto;
+        background-size: 140%;
     }
 
     @media #{$sm} {
-        background-size: 260% auto;
+        background-size: 260%;
         background-position: 56% 0;
     }
 
@@ -28,6 +28,10 @@
         background: linear-gradient(0deg, #F3F5F9, transparent);
         left: 0;
         bottom: 0;
+
+        @media #{$xl} {
+            content: '';
+        }
 
         @media #{$sm} {
             content: '';

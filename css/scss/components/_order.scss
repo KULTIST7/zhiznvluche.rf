@@ -1,10 +1,15 @@
 .order {
-    position: relative;
+    padding-top: 8rem;
     margin-bottom: 12rem;
     z-index: 2;
 
     @media #{$lg} {
+        padding-top: 0;
         margin-bottom: 7rem;
+    }
+
+    &__wrapper {
+        position: relative;
     }
 
     &__image {

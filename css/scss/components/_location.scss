@@ -1,0 +1,185 @@
+.location {
+    margin-bottom: 10rem;
+
+    &__description {
+        margin-bottom: 4rem;
+
+        @media #{$lg} {
+            line-height: 2rem;
+        }
+    }
+
+    &__content {
+        display: flex;
+        gap: 3.2rem;
+
+        @media #{$lg} {
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+
+    &__list {
+        position: relative;
+        background-color: rgba(#fff, 0.7);
+        padding: 2.4rem 12.7rem 2.4rem 2.8rem;
+        border-radius: 2rem;
+
+        @media #{$lg} {
+            background-color: transparent;
+            padding: 0;
+            border: 1px #C4CED8 solid;
+            border-radius: 2.3rem;
+            overflow: hidden;
+        }
+
+        &.collapsed {
+            .location__list__arrow {
+                width: 100%;
+
+                img {
+                    rotate: 0deg;
+                }
+            }
+        }
+
+        &__arrow {
+            position: absolute;
+            display: none;
+            width: 5.1rem;
+            height: 4.6rem;
+            z-index: 1;
+            top: 0;
+            right: 0;
+
+            @media #{$lg} {
+                display: flex;
+            }
+
+            img {
+                position: absolute;
+                object-fit: contain;
+                object-position: center;
+                width: 1.1rem;
+                height: 0.6rem;
+                top: 2rem;
+                right: 2rem;
+                rotate: 180deg;
+
+            }
+        }
+
+        ul {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            list-style: none;
+            padding-left: 0;
+
+            @media #{$lg} {
+                padding: 0.3rem 0 0.3rem 0.3rem;
+            }
+
+            li {
+                @media #{$lg} {
+                    order: 2;
+                }
+
+                &:has(>a.active) {
+                    @media #{$lg} {
+                        order: 1;
+                    }
+                }
+
+                a {
+                    font-weight: 500;
+                    font-size: 1.6rem;
+                    text-decoration: none;
+                    text-wrap: nowrap;
+                    color: #1C1C1C;
+                    display: flex;
+                    gap: 2rem;
+                    align-items: center;
+
+                    @media #{$lg} {
+                        gap: 1.5rem;
+                    }
+
+                    &.active, &:hover {
+                        .location__item {
+                            &__icon {
+                                fill: #fff;
+
+                                &_stroke {
+                                    stroke: #fff;
+                                }
+                            }
+
+                            &__bg {
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                    svg {
+                        width: 4rem;
+                        height: 4rem;
+                    }
+                }
+
+                &.location__main-item {
+                    margin-left: -0.3rem;
+                    margin-bottom: 0.7rem;
+
+                    @media #{$lg} {
+                        display: none;
+                    }
+
+                    a {
+                        gap: 1.3rem;
+        
+                        svg {
+                            width: 4.6rem;
+                            height: 5.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__item {
+        &__icon {
+            &, &_stroke {
+                transition: all .1s linear;
+            }
+        }
+
+        &__bg {
+            opacity: 0;
+            transition: all .1s linear;
+        }
+    }
+
+    &__map {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 68rem;
+        flex-grow: 1;
+        overflow: hidden;
+        border-radius: 2rem;
+
+        @media #{$lg} {
+            height: 43rem;
+        }
+
+        img {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

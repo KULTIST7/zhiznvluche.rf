@@ -1,0 +1,112 @@
+.pagination {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    background-color: rgba(#fff, 0.5);
+    box-sizing: 0 0.4rem 6rem 0 rgba(#000, 0.02);
+    border-radius: 10rem;
+
+    &__show-more {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        height: 100%;
+        cursor: pointer;
+
+        &:hover {
+            p {
+                color: $color-active;
+            }
+
+            svg {
+                path {
+                    fill: $color-active;
+                }
+            }
+        }
+
+        p {
+            font-size: 1.4rem;
+            color: #91A2AB;
+            transition: all .1s linear;
+
+            span {
+                font-size: 1.4rem;
+                color: $color-active;
+            }
+        }
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+
+            path {
+                transition: all .1s linear;
+            }
+        }
+    }
+
+    &__pages {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        right: 1rem;
+        top: 0;
+
+        @media #{$lg} {
+            display: none;
+        }
+
+        a, span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.6rem;
+            color: #A8B2BE;
+            width: 2.8rem;
+            height: 2.8rem;
+        }
+
+        a {
+            text-decoration: none;
+            transition: all .1s linear;
+
+            &:hover {
+                color: $color-active;
+            }
+        }
+
+        span {
+            &.active {
+                color: $color-active;
+                background-color: rgba(#7CB2CF, 0.2);
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &__prev, &__next {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4.5rem;
+        height: 4.5rem;
+        cursor: pointer;
+
+        svg {
+            width: 0.6rem;
+            height: 1.2rem;
+        }
+    }
+
+    &__disabled {
+        cursor: default;
+        svg {
+            path {
+                fill: #A8B2BE;
+            }
+        }
+    }
+}

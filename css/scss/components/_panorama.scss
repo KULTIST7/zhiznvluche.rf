@@ -11,6 +11,10 @@
     padding: 0 0 2.5rem;
     margin-bottom: 21rem;
 
+    @media #{$xl} {
+        background-size: cover;
+    }
+
     @media #{$lg} {
         min-height: 60rem;
         background-size: cover;
@@ -45,6 +49,10 @@
         background-size: contain;
         height: 52.5rem;
         bottom: -21rem;
+
+        @media #{$xl} {
+            background-size: cover;
+        }
 
         @media #{$lg} {
             background: url(../images/panorama-clouds-2-mob.png) no-repeat center / cover;
