@@ -8,21 +8,6 @@
             width: calc(100% - 2.8rem);
             margin: 0 1.4rem;
         }
-
-        &>.title {
-            margin-bottom: 1.7rem;
-        }
-
-        &>p {
-            line-height: 2.2rem;
-            color: $color-secondary;
-            margin-bottom: 2.8rem;
-
-            @media #{$lg} {
-                font-size: 1.4rem;
-                line-height: 1.6rem;
-            }
-        }
     }
 
     &-items {

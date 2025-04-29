@@ -2,6 +2,10 @@
     position: relative;
     margin-bottom: 15rem;
 
+    @media #{$lg} {
+        margin-bottom: 6rem;
+    }
+
     .section-box {
         max-width: 154rem;
     }

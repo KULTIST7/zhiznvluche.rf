@@ -9,16 +9,12 @@
     background-size: contain;
     box-sizing: border-box;
     padding: 0 0 2.5rem;
-    margin-bottom: 21rem;
-
-    @media #{$xl} {
-        background-size: cover;
-    }
+    margin-bottom: 2.5rem;
 
     @media #{$lg} {
         min-height: 60rem;
         background-size: cover;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;   
     }
 
     &::before, &::after {
@@ -83,6 +79,16 @@
         @media #{$md} {
             width: calc(100% - 1.6rem);
             margin-left: -0.8rem;
+        }
+    }
+}
+
+.main-page {
+    .panorama {
+        margin-bottom: 21rem;
+
+        @media #{$lg} {
+            margin-bottom: 3rem;
         }
     }
 }

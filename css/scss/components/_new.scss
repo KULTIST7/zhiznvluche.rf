@@ -63,6 +63,9 @@
     }
 
     .btn-back {
+        text-transform: none;
+        padding: 0 9.2rem;
+
         @media #{$md} {
             width: 100%;
         }

@@ -233,9 +233,10 @@
         }
 
         &-col {
-            padding: 0 2.5rem;
+            padding: 0 1.5rem 0 2rem;
 
             & + .filter-number-col {
+                padding: 0 2rem 0 1.5rem;
                 border-left: 1px #C4CED8 solid;
 
                 @media #{$lg} {
@@ -367,6 +368,11 @@
         .btn {
             width: 100%;
         }
+    }
+
+    &-btn {
+        position: relative;
+        z-index: 1;
     }
 }
 

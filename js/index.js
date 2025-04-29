@@ -213,11 +213,12 @@ $(document).ready(function () {
         });
 
         $('.filter-number-input').each(function () {
-            if (this.value.length > 6) {
-                this.size = this.value.length + 2;
+            if (this.value.includes('.') || this.value.length > 6) {
+                $(this).css('width', `${this.value.length-1}ch`);
             } else {
-                this.size = this.value.length || 1;
+                $(this).css('width', `${this.value.length}ch`);
             }
+            
         });
 
         $('.filter-open').on('click', function () {
