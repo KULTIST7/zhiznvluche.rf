@@ -1,0 +1,96 @@
+.documents {
+    margin-bottom: 12rem;
+
+    @media #{$lg} {
+        margin-bottom: 10rem;
+    }
+
+    &__block {
+        margin-bottom: 4.5rem;
+
+        @media #{$lg} {
+            margin-bottom: 4rem;
+        }
+
+        h3 {
+            font-weight: 500;
+            font-size: 2.5rem;
+            color: $color-secondary;
+            margin-bottom: 2.5rem;
+
+            @media #{$lg} {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 10.2rem;
+        background-color: #fff;
+        box-sizing: border-box;
+        padding: 2rem 1.2rem 1.8rem 11.6rem;
+        border-radius: 2rem;
+        transition: all .1s linear;
+        
+        &:hover {
+            box-shadow: 0 0 3rem 0 rgba(#051426, 0.1);
+
+            &::after {
+                filter: none;
+                opacity: 1;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 3.5rem;
+            height: 3.5rem;
+            background: url(../images/svg/download-icon.svg) no-repeat center / contain;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 1.2rem;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 4.2rem;
+            height: 4.3rem;
+            background: url(../images/svg/pdf.svg) no-repeat center / contain;
+            filter: grayscale(1);
+            opacity: 0.7;
+            transition: all .1s linear;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 5.7rem;
+        }
+
+        a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            top: 0;
+            left: 0;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            color: #333C45;
+        }
+
+        span {
+            font-size: 1.6rem;
+            line-height: 1.6rem;
+            color: #ACB4BD;
+        }
+    }
+}

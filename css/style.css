@@ -4646,4 +4646,94 @@ h3.title {
   .contacts__map img {
     border-radius: 0;
   }
+}
+
+.documents {
+  margin-bottom: 12rem;
+}
+@media (max-width: 992px) {
+  .documents {
+    margin-bottom: 10rem;
+  }
+}
+.documents__block {
+  margin-bottom: 4.5rem;
+}
+@media (max-width: 992px) {
+  .documents__block {
+    margin-bottom: 4rem;
+  }
+}
+.documents__block h3 {
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: #546071;
+  margin-bottom: 2.5rem;
+}
+@media (max-width: 992px) {
+  .documents__block h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+.documents__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 10.2rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 2rem 1.2rem 1.8rem 11.6rem;
+  border-radius: 2rem;
+  transition: all 0.1s linear;
+}
+.documents__item:hover {
+  box-shadow: 0 0 3rem 0 rgba(5, 20, 38, 0.1);
+}
+.documents__item:hover::after {
+  filter: none;
+  opacity: 1;
+}
+.documents__item::before {
+  content: "";
+  position: absolute;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: url(../images/svg/download-icon.svg) no-repeat center/contain;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 1.2rem;
+}
+.documents__item::after {
+  content: "";
+  position: absolute;
+  width: 4.2rem;
+  height: 4.3rem;
+  background: url(../images/svg/pdf.svg) no-repeat center/contain;
+  filter: grayscale(1);
+  opacity: 0.7;
+  transition: all 0.1s linear;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 5.7rem;
+}
+.documents__item a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+.documents__item p {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: #333C45;
+}
+.documents__item span {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  color: #ACB4BD;
 }/*# sourceMappingURL=style.css.map */
