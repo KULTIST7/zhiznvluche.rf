@@ -42,6 +42,20 @@
                 width: 100%;
             }
         }
+
+        &-photos {
+            &>div, &>a {
+                width: 31.764%;
+
+                @media #{$lg} {
+                    width: 47.75%;
+                }
+
+                @media #{$md} {
+                    width: 100%;
+                }
+            }
+        }
     }
 
     &-card {
