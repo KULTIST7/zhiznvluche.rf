@@ -5,6 +5,11 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     width: max-content;
+
+    @media #{$lg} {
+        line-height: 4.5rem;
+        width: auto;
+    }
 }
 
 h2.title {

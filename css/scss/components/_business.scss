@@ -1,0 +1,58 @@
+.business {
+    min-height: 37rem;
+    margin-bottom: 12rem;
+
+    @media #{$lg} {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        padding: 0 1.4rem;
+        margin-bottom: 5.5rem;
+    }
+
+    img {
+        float: right;
+        object-fit: cover;
+        object-position: center;
+        width: 66.5rem;
+        height: auto;
+        border-radius: 2rem;
+        margin-left: 3.2rem;
+
+        @media #{$lg} {
+            float: none;
+            width: 100%;
+            margin-top: 1.5rem;
+            margin-left: 0;
+            order: 1;
+        }
+    }
+
+    * {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        color: $color-secondary;
+
+        @media #{$lg} {
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
+    }
+
+    span {
+        color: $color-active;
+    }
+
+    a {
+        transition: all .1s linear;
+
+        &:hover {
+            color: $color-active;
+        }
+    }
+
+    ul {
+        padding-left: 2.2rem;
+        margin-bottom: 2.2rem;
+    }
+}

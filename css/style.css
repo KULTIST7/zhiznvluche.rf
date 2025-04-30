@@ -434,6 +434,12 @@ body main {
   -webkit-text-fill-color: transparent;
   width: max-content;
 }
+@media (max-width: 992px) {
+  .title {
+    line-height: 4.5rem;
+    width: auto;
+  }
+}
 
 h2.title {
   font-size: 8rem;
@@ -4736,4 +4742,60 @@ h3.title {
   font-size: 1.6rem;
   line-height: 1.6rem;
   color: #ACB4BD;
+}
+
+.business {
+  min-height: 37rem;
+  margin-bottom: 12rem;
+}
+@media (max-width: 992px) {
+  .business {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding: 0 1.4rem;
+    margin-bottom: 5.5rem;
+  }
+}
+.business img {
+  float: right;
+  object-fit: cover;
+  object-position: center;
+  width: 66.5rem;
+  height: auto;
+  border-radius: 2rem;
+  margin-left: 3.2rem;
+}
+@media (max-width: 992px) {
+  .business img {
+    float: none;
+    width: 100%;
+    margin-top: 1.5rem;
+    margin-left: 0;
+    order: 1;
+  }
+}
+.business * {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  color: #546071;
+}
+@media (max-width: 992px) {
+  .business * {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
+.business span {
+  color: #3C9CD7;
+}
+.business a {
+  transition: all 0.1s linear;
+}
+.business a:hover {
+  color: #3C9CD7;
+}
+.business ul {
+  padding-left: 2.2rem;
+  margin-bottom: 2.2rem;
 }/*# sourceMappingURL=style.css.map */
