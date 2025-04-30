@@ -1,9 +1,9 @@
 .about {
     position: relative;
-    margin-bottom: 15rem;
+    margin-bottom: 46rem;
 
     @media #{$lg} {
-        margin-bottom: 6rem;
+        margin-bottom: 27.5rem;
     }
 
     .section-box {
@@ -49,100 +49,6 @@
         .btn {
             @media #{$lg} {
                 transform: translate(-2rem, 1rem);
-            }
-        }
-    }
-
-    &__info {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 54.8rem;
-        height: 39.5rem;
-        background: url(../images/about-img-3.jpg) no-repeat center / cover;
-        box-sizing: border-box;
-        padding: 1.5rem 2.5rem 3rem;
-        border-radius: 0 10rem 10rem 10rem;
-        margin: 8.5rem 0 0 67rem;
-
-        @media #{$lg} {
-            width: 25.5rem;
-            height: 21rem;
-            padding: 1rem 3rem 3rem 1.5rem;
-            border-radius: 0 5rem 5rem 5rem;
-            margin: 23.3rem 0 0 0;
-        }
-
-        &::before, &::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 15rem;
-            left: 0;
-            pointer-events: none;
-
-            @media #{$lg} {
-                height: 10rem;
-            }
-        }
-
-        &::before {
-            background: linear-gradient(180deg, rgba(#1A2535, 0.8), transparent);
-            border-radius: 0 10rem 0 0;
-            top: 0;
-
-            @media #{$lg} {
-                border-radius: 0 5rem 0 0;
-            }
-        }
-
-        &::after {
-            background: linear-gradient(0deg, rgba(#1A2535, 0.8), transparent);
-            border-radius: 0 0 10rem 10rem;
-            bottom: 0;
-
-            @media #{$lg} {
-                border-radius: 0 0 5rem 5rem;
-            }
-        }
-
-        h3 {
-            font-family: $font-second;
-            font-weight: 400;
-            font-size: 10rem;
-            color: #fff;
-            text-transform: uppercase;
-            z-index: 1;
-
-            @media #{$lg} {
-                font-size: 5rem;
-            }
-
-            span {
-                font-family: $font-second;
-                font-size: 10rem;
-                color: #33ADF8;
-
-                @media #{$lg} {
-                    font-size: 5rem;
-                }
-            }
-        }
-
-        p {
-            font-weight: 300;
-            font-size: 3rem;
-            color: #fff;
-            margin-left: 3rem;
-            z-index: 1;
-
-            @media #{$lg} {
-                font-size: 1.8rem;
-                line-height: 1.5rem;
-                text-align: right;
-                width: max-content;
-                margin-left: 0.5rem;
             }
         }
     }
