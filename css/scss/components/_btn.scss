@@ -87,7 +87,9 @@
     }
 
     &-invert {
-        background: linear-gradient(90deg, #B5C7D2 0%, #B5C7D2 50%, $color-active 51%, #163966 100%) padding-box;
+        background: 
+        linear-gradient(90deg, #B5C7D2 0%, #B5C7D2 50%, $color-active 51%, #163966 100%) padding-box,
+        linear-gradient(90deg, rgba($color: #fff, $alpha: 0.8), transparent) border-box;
         background-size: 200%;
 
         &:hover {

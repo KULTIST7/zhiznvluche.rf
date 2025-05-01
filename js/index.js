@@ -308,6 +308,20 @@ $(document).ready(function () {
         });
     }
 
+    if ($('.about-house').length) {
+        const aboutHouseSlider = new Swiper('.about-house__slider', {
+            speed: 500,
+            navigation: {
+                prevEl: '.about-house__slider__prev',
+                nextEl: '.about-house__slider__next'
+            },
+            pagination: {
+                type: 'progressbar',
+                el: '.about-house .slider-progressbar'
+            }
+        });
+    }
+
     // демонстрация (можнр удалить)
     if ($('.catalog').length) {
         $('.catalog__sort__item').on('click', function () {

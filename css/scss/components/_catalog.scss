@@ -315,7 +315,7 @@
             font-weight: 600;
             font-size: 2rem;
             line-height: 2.2rem;
-            color: #1C1C1C;
+            color: $color-primary;
             padding-left: 1rem;
         }
 
@@ -344,14 +344,14 @@
                 font-size: 2rem;
                 line-height: 2.2rem;
                 text-wrap: nowrap;
-                color: #1C1C1C;
+                color: $color-primary;
             }
 
             span {
                 font-size: 1.4rem;
                 line-height: 2.2rem;
                 text-wrap: nowrap;
-                color: #1C1C1C;
+                color: $color-primary;
 
                 sup {
                     font-size: 1.0rem;

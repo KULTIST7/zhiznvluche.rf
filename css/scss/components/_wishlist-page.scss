@@ -1,0 +1,129 @@
+.wishlist-page {
+    margin-bottom: 15rem;
+
+    @media #{$lg} {
+        padding: 0 1.4rem;
+        margin-bottom: 7.5rem;
+    }
+
+    &__content {
+        @media #{$lg} {
+            gap: 3.2rem;
+        }
+
+        @media #{$md} {
+            gap: 2rem;
+        }
+    }
+
+    &__panel {
+        position: fixed;
+        display: none;
+        justify-content: center;
+        gap: 0.3rem;
+        width: calc(100% - 1.4rem);
+        transform: translateX(-50%);
+        left: 50%;
+        bottom: 2.1rem;
+        z-index: 100;
+
+        @media #{$lg} {
+            display: flex;
+        }
+
+        .btn {
+            @media #{$sm} {
+                font-size: 1.2rem;
+                padding: 0 2.2rem;
+            }
+        }
+
+        .btn-invert {
+            gap: 0.5rem;
+
+            @media #{$sm} {
+                flex-grow: 1;
+            }
+
+            svg {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+
+    &__clear {
+        font-weight: 500;
+        font-size: 1.4rem;
+        text-decoration: none;
+        color: $color-secondary;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        width: max-content;
+        margin: 0 2.5rem 2.5rem auto;
+        transition: all .1s linear;
+
+        @media #{$lg} {
+            display: none;
+        }
+
+        &:hover {
+            color: $color-active;
+
+            svg {
+                path {
+                    fill: $color-active;
+                }
+            }
+        }
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+
+            path {
+                transition: all .1s linear;
+            }
+        }
+    }
+
+    .catalog__card {
+        .wishlist {
+            &:hover {                
+                &::before {
+                    opacity: 1;
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 0.6rem;
+                height: 0.6rem;
+                background: url(../images/svg/wishlist-delete.svg) no-repeat center / contain;
+                pointer-events: none;
+                transition: all .1s linear;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                top: calc(50% - 0.2rem);
+                left: 50%;
+                opacity: 0;
+
+                @media #{$lg} {
+                    opacity: 1;
+                }
+            }
+
+            svg {
+                path {
+                    opacity: 0;
+    
+                    &:last-of-type {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

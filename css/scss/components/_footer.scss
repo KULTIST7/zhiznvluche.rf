@@ -12,6 +12,7 @@
         background: linear-gradient(0deg, rgba(#1C78B9, 0.1), transparent);
         filter: blur(4rem);
         pointer-events: none;
+        z-index: 1;
         left: 0;
         bottom: 0;
 
@@ -64,6 +65,7 @@
         padding: 3.8rem 0 1rem;
         border-radius: 10rem 10rem 0 0;
         margin-bottom: 3rem;
+        z-index: 1;
 
         @media #{$lg} {
             padding: 2.2rem 0;
